@@ -135,11 +135,11 @@ header .nav-menu-1 {
   width: 100%;
   right: 0;
   height: 100vh;
-  gap:  0;
+  gap:  20px;
   background-color: #0e1927;
   align-items: center;
   transform: translateX(100%);
-  justify-content: center;
+  justify-content: start;
 }
 header .nav-menu-1.active {
   transform: translateX(0%);
@@ -153,7 +153,7 @@ header .nav-menu-1 a {
   margin: 0;
   text-transform: uppercase;
   width: 100%;
-  height: 10%;
+  height: 12%;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -302,40 +302,6 @@ header .nav-menu-2 div:hover:after {
 .hero .first-rightdown button:hover {
   background-color: #c6ac83;
   color: #0e1927;
-}
-.hero .hero-right {
-  background-color: #0e1927;
-  color: white;
-  text-align: center;
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  transform: translateX(100%);
-  gap: 20px;
-  padding: 40px;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin-bottom: 80px;
-}
-.hero .hero-right #close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-.hero .hero-right button {
-  background-color: transparent;
-  width: 100%;
-  height: 25%;
-  border: none;
-  position: relative;
-  cursor: default;
-}
-.hero .hero-right span {
-  color: #c6ac83;
-  font-size: 28px;
 }
 .hero .classBtn {
   color: #c6ac83;
@@ -1082,6 +1048,11 @@ footer .footer-lastpart div p {
   p {
     font-size: 15px;
     line-height: 15px;
+  }
+
+
+  .hero .hero-right {
+    display: none;
   }
 
 
@@ -2633,6 +2604,46 @@ footer .footer-lastpart div p {
     display: flex;
     justify-content: start;
     align-items: center;
+  }
+  /* aside */
+  .hero .hero-right {
+    background-color: #0e1927;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(100%);
+    gap: 20px;
+    padding: 40px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 80px;
+  }
+  .hero .hero-right.able {
+    display: flex;
+    transform: translateX(0%);
+    transition: 200ms;
+  }
+  .hero .hero-right #close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  .hero .hero-right button {
+    background-color: transparent;
+    width: 100%;
+    height: 25%;
+    border: none;
+    position: relative;
+    cursor: default;
+  }
+  .hero .hero-right span {
+    color: #c6ac83;
+    font-size: 28px;
   }
 
 

@@ -14,5 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('navmenu1 is not active');
       menu1.classList.add('active');
     }
+
+    if (!rightSect.classList.contains('able')) {
+      console.log('right hero is not able so we need to able it...');
+      rightSect.classList.add('able');
+    } else {
+      setTimeout(() => {
+      rightSect.classList.remove('able');
+      }, 200)
+    }
   })
+
 })
