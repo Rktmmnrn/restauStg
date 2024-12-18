@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   gap: 5px;
 }
 .logo>span:first-child {
@@ -27,6 +27,7 @@ body {
 }
 .logo>span:last-child {
   font-size: 4px;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -51,8 +52,8 @@ button {
   bottom: 0;
 }
 .classBtn:hover {
-  gap: 4px;
-  transition: 0.3s;
+  gap: 0px;
+  transition: 0.1s;
 }
 
 
@@ -135,21 +136,24 @@ header .nav-menu-2 {
   display: none;
   flex-direction: column;
 }
-header #nav-btn {
+header .classBtn {
   display: flex;
   flex-direction: column;
 }
-header #nav-btn #nav-button {
+header .classBtn .btn {
   background-color: transparent;
   border: 1px solid;
   color: #c6ac83;
   padding: 8px 10px;
   font-size: 12px;
 }
-header #nav-btn:hover #nav-button {
+header .classBtn:hover .btn {
   border: none;
   padding: 0px 0px;
   transition: 0.25s;
+}
+header .classBtn:after {
+  border-color: #c6ac83;
 }
 
 
@@ -191,7 +195,7 @@ header #nav-btn:hover #nav-button {
 .hero .first-savortheart p {
   margin-top: 10px;
 }
-.hero .first-savortheart #first-discovermenu {
+.hero .first-savortheart .btn {
   padding: 16px 0px;
   width: 203px;
   background-color: #c6ac83;
@@ -265,6 +269,9 @@ header #nav-btn:hover #nav-button {
   color: #c6ac83;
   font-size: 28px;
 }
+.hero .classBtn {
+  color: #c6ac83;
+}
 
 
 .about {
@@ -310,7 +317,7 @@ header #nav-btn:hover #nav-button {
 .about .second-imgText .second-aboutRestau p {
   width: 100%;
 }
-.about .second-imgText #second-readmore {
+.about .second-imgText .btn {
   border: 1px solid #0e1927;
   background-color: white;
   color: #0e1927;
@@ -334,7 +341,7 @@ header #nav-btn:hover #nav-button {
   /* paragraphe */
   margin-top: 10px;
 }
-.about .second-openingTime .second-afterOpening #second-booktable {
+.about .second-openingTime .second-afterOpening .btn {
   /* div du booktable */
   border: 1px solid #0e1927;
   margin-top: 10px;
@@ -369,24 +376,23 @@ header #nav-btn:hover #nav-button {
   justify-content: center;
 }
 .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour {
-  list-style-type: none;
   background-color: #0e1927;
   color: white;
   width: 80%;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div {
   display: flex;
   width: 100%;
   flex-direction: column;
-}
-.about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div>div:first-child {
-  margin-top: 0;
+  gap: 15px;
 }
 .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div>div {
   display: flex;
   align-items: center;
-  margin-top: 15px;
   width: 100%;
   justify-content: space-between;
   font-weight: 300;
@@ -466,17 +472,36 @@ header #nav-btn:hover #nav-button {
   gap: 10px;
   color: #c6ac83;
 }
-.specialMenu .third-listMenu #third-specialMenu {
-  background-color: #c6ac83;
-  color: #0e1927;
-  border: none;
-}
-.specialMenu .third-listMenu>div>div+div button {
+.specialMenu .third-listMenu>div  button {
   border: 1px solid #c6ac83;
   background-color: transparent;
   color: #c6ac83;
   width: 190px;
 }
+.specialMenu .third-listMenu>div>div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.specialMenu .third-listMenu>div>div:after {
+  content: '';
+  transform: translateX(20%);
+  overflow: hidden;
+}
+.specialMenu .third-listMenu>div>div:hover:after {
+  content: '';
+  transform: translateX(0%);
+  overflow: visible;
+  width: 100%;
+  border-top: 1px solid #c6ac83;
+  transition: 0.3s;
+}
+.specialMenu .third-listMenu>div>div:hover button {
+  background-color: #c6ac83;
+  color: #0e1927;
+  transition: 0.3s;
+}
+
 .specialMenu .third-viewAll { /* part 2 */
   margin-top: 40px;
   display: flex;
@@ -554,7 +579,7 @@ header #nav-btn:hover #nav-button {
   align-items: center;
   margin-bottom: 20px;
 }
-.specialMenu .third-beforeLorem #third-viewAll2 {
+.specialMenu .third-beforeLorem .btn {
   color: #c6ac83;
   border: 1px solid;
   background-color: transparent;
@@ -618,7 +643,7 @@ header #nav-btn:hover #nav-button {
 .foodPhilosophy .five-imageQuality article p {
   margin-bottom: 18px;
 }
-.foodPhilosophy .five-imageQuality #five-viewAll {
+.foodPhilosophy .five-imageQuality .btn {
   border: 1px solid #0e1927;
   color: #0e1927;
   background-color: transparent;
@@ -1017,11 +1042,7 @@ footer .footer-lastpart div p {
   .nav-menuHamburger img {
     cursor: pointer;
   }
-  header #nav-btn {
-    display: flex;
-    flex-direction: column;
-  }
-  header #nav-btn #nav-button {
+  header .classBtn .btn {
     background-color: #0e1927;
     border: 1px solid #c6ac83;
     color: #c6ac83;
@@ -1198,19 +1219,19 @@ footer .footer-lastpart div p {
     color: white;
     width: 100%;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div {
     display: flex;
     width: 100%;
     flex-direction: column;
-  }
-  .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div>div:first-child {
-    margin-top: 0;
+    gap: 10px;
   }
   .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div>div {
     display: flex;
     align-items: center;
-    margin-top: 10px;
     width: 100%;
     justify-content: space-between;
     font-weight: 300;
@@ -1290,12 +1311,7 @@ footer .footer-lastpart div p {
     gap: 8px;
     color: #c6ac83;
   }
-  .specialMenu .third-listMenu #third-specialMenu {
-    background-color: #c6ac83;
-    color: #0e1927;
-    border: none;
-  }
-  .specialMenu .third-listMenu>div>div+div button {
+  .specialMenu .third-listMenu>div button {
     border: 1px solid #c6ac83;
     background-color: transparent;
     color: #c6ac83;
@@ -1800,18 +1816,15 @@ footer .footer-lastpart div p {
   header .nav-menu-1>a:first-child {
     margin-left: 0;
   }
-  header #nav-btn {
-    display: flex;
-    flex-direction: column;
-  }
-  header #nav-btn:after {
-    border-color: #c6ac83;
-  }
-  header #nav-btn #nav-button {
+  header .classBtn .btn {
     background-color: #0e1927;
     border: 1px solid #c6ac83;
     color: #c6ac83;
     font-size: 16px;
+  }
+  header .classBtn:hover .btn {
+    border: 1px solid;
+    padding: 12px 10px;
   }
   header .nav-menu-2 {
     display: flex;
@@ -1831,10 +1844,6 @@ footer .footer-lastpart div p {
     color: #c6ac83;
     border-top: 1px solid;
     transform: translateX(10px);
-  }
-  header #nav-btn:hover #nav-button {
-    border: 1px solid;
-    padding: 12px 10px;
   }
 
 
@@ -1869,14 +1878,6 @@ footer .footer-lastpart div p {
   .hero .first-savortheart p {
     margin-top: 10px;
   }
-  .hero .first-savortheart #first-discovermenu {
-    padding: 16px 0px;
-    width: 203px;
-    background-color: #c6ac83;
-    text-align: center;
-    margin-top: 20px;
-    border: none;
-  }
   .hero .first-rightdown {
     display: flex;
     position: absolute;
@@ -1899,9 +1900,6 @@ footer .footer-lastpart div p {
     padding: 16px 30px;
     font-family: 'Tenor Sans', sans-serif;
     font-weight: 400;
-  }
-  .hero .classBtn {
-    color: #c6ac83;
   }
   
 
@@ -1953,11 +1951,6 @@ footer .footer-lastpart div p {
     /* paragraphe */
     width: 100%;
   }
-  .about .second-imgText #second-readmore {
-    border: 1px solid #0e1927;
-    background-color: white;
-    color: #0e1927;
-  }
 
   .about .second-openingTime {
     /* part2 */
@@ -1977,13 +1970,6 @@ footer .footer-lastpart div p {
   .about .second-openingTime .second-afterOpening p {
     /* paragraphe */
     margin-top: 10px;
-  }
-  .about .second-openingTime .second-afterOpening #second-booktable {
-    /* div du booktable */
-    border: 1px solid #0e1927;
-    margin-top: 10px;
-    background-color: white;
-    color: #0e1927;
   }
   .about .second-openingTime .second-imgText2 {
     display: flex;
@@ -2011,24 +1997,24 @@ footer .footer-lastpart div p {
     top: inherit;
   }
   .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour {
-    list-style-type: none;
     background-color: #0e1927;
     color: white;
     width: 100%;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div {
     display: flex;
     width: 100%;
     flex-direction: column;
-  }
-  .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div>div:first-child {
-    margin-top: 0;
+    gap: 19px;
   }
   .about .second-openingTime .second-imgText2 .second-beforetimeHour .second-timeHour>div>div {
     display: flex;
     align-items: center;
-    margin-top: 19px;
+    margin-top: 0px;
     width: 100%;
     justify-content: space-between;
     font-weight: 300;
@@ -2091,12 +2077,7 @@ footer .footer-lastpart div p {
     gap: 20px;
     color: #c6ac83;
   }
-  .specialMenu .third-listMenu #third-specialMenu {
-    background-color: #c6ac83;
-    color: #0e1927;
-    border: none;
-  }
-  .specialMenu .third-listMenu>div>div+div button {
+  .specialMenu .third-listMenu>div button {
     border: 1px solid #c6ac83;
     background-color: transparent;
     color: #c6ac83;
@@ -2182,11 +2163,6 @@ footer .footer-lastpart div p {
     align-items: center;
     margin-bottom: 40px;
   }
-  .specialMenu .third-beforeLorem #third-viewAll2 {
-    color: #c6ac83;
-    border: 1px solid;
-    background-color: transparent;
-  }
 
 
   .foodPhilosophy {
@@ -2232,11 +2208,6 @@ footer .footer-lastpart div p {
   }
   .foodPhilosophy .five-imageQuality article p {
     margin-bottom: 20px;
-  }
-  .foodPhilosophy .five-imageQuality #five-viewAll {
-    border: 1px solid #0e1927;
-    color: #0e1927;
-    background-color: transparent;
   }
 
 
