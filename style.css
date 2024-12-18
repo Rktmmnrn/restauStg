@@ -37,6 +37,7 @@ body {
 }
 button {
   cursor: pointer;
+  text-transform: uppercase;
 }
 .classBtn {
   display: flex;
@@ -79,12 +80,14 @@ h2 {
   font-weight: 400;
   font-family: "Tenor Sans", sans-serif;
   font-style: normal;
+  text-transform: uppercase;
 }
 h3 {
   font-weight: 400;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 p {
   font-family: 'Josefin Sans', sans-serif;
@@ -123,6 +126,7 @@ header .nav-menu-1 a {
   font-size: 16px;
   font-weight: 400;
   margin: 0 10px;
+  text-transform: uppercase;
 }
 .nav-menuHamburger img {
   cursor: pointer;
@@ -451,7 +455,7 @@ header #nav-btn:hover #nav-button {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .specialMenu .third-listMenu>div {
   display: flex;
@@ -459,7 +463,6 @@ header #nav-btn:hover #nav-button {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0px;
   gap: 10px;
   color: #c6ac83;
 }
@@ -475,7 +478,7 @@ header #nav-btn:hover #nav-button {
   width: 190px;
 }
 .specialMenu .third-viewAll { /* part 2 */
-  margin: 40px 0;
+  margin-top: 40px;
   display: flex;
   color: #c6ac83;
   list-style-type: none;
@@ -531,6 +534,7 @@ header #nav-btn:hover #nav-button {
   font-size: 18px;
   font-weight: 400;
   justify-content: space-between;
+  text-transform: uppercase;
 }
 .specialMenu .third-beforeLorem .third-loremipsum>div>div>div {
   border-top: 1px solid;
@@ -637,6 +641,7 @@ header #nav-btn:hover #nav-button {
 .six>div p {
   color: white;
   margin-top: 20px;
+  text-transform: uppercase;
 }
 .six>div div {
   display: flex;
@@ -715,6 +720,7 @@ header #nav-btn:hover #nav-button {
 .dinning .seven-elegant .seven-elegantDining h4 {
   margin-bottom: 10px;
   font-size: 20px;
+  text-transform: uppercase;
 }
 .dinning .seven-elegant .seven-elegantDining>p+p {
   margin-top: 20px;
@@ -938,6 +944,7 @@ footer .footer-lastpart div {
 }
 footer .footer-lastpart div p {
   margin-left: 10px;
+  text-transform: uppercase;
 }
 
 
@@ -1296,7 +1303,8 @@ footer .footer-lastpart div p {
   }
 
   .specialMenu .third-viewAll { /* part 2 */
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 0;
     display: flex;
     color: #c6ac83;
     list-style-type: none;
@@ -2096,7 +2104,8 @@ footer .footer-lastpart div p {
   }
 
   .specialMenu .third-viewAll { /* part 2 */
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 0;
     display: flex;
     color: #c6ac83;
     list-style-type: none;
