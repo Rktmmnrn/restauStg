@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let rightSect = document.getElementsByClassName('.section-right');
+  let rightSect = document.querySelector('hero-right');
   let sectRight = document.getElementById('menu-right');
   sectRight.addEventListener('Click', () => {
     console.log('click ohh');
@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rightSect.style.transform = 'translateX(0%)';
   })
 
-  let hamburg = document.getElementById('menuHamburger');
-  hamburg.addEventListener('click', () => {
+  sectRight.addEventListener('click', () => {
     console.log('cliccckk');
     let menu1 = document.getElementById('nav-menu1');
 
@@ -19,4 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       menu1.style.display = 'none';
     }
   })
+
+  // queryselector : prendre les éléments class dans html avec JS
+
 })

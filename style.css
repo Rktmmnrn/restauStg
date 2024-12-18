@@ -18,6 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  margin-right: 20px;
 }
 .logo>span:first-child {
   text-transform: uppercase;
@@ -39,6 +40,9 @@ body {
 button {
   cursor: pointer;
   text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 }
 .classBtn {
   display: flex;
@@ -52,7 +56,7 @@ button {
   bottom: 0;
 }
 .classBtn:hover {
-  gap: 0px;
+  gap: 1px;
   transition: 0.1s;
 }
 
@@ -73,11 +77,11 @@ main {
 h1 {
   font-weight: 400;
   font-family: "Tenor Sans", sans-serif;
-  font-size: 64px;
+  font-size: 30px;
   text-transform: capitalize;
 }
 h2 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 400;
   font-family: "Tenor Sans", sans-serif;
   font-style: normal;
@@ -86,14 +90,14 @@ h2 {
 h3 {
   font-weight: 400;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 15px;
   text-transform: uppercase;
 }
 p {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 17px;
-  line-height: 17px;
+  font-size: 14px;
+  line-height: 14px;
   font-weight: 300;
 }
 
@@ -129,13 +133,6 @@ header .nav-menu-1 a {
   margin: 0 10px;
   text-transform: uppercase;
 }
-.nav-menuHamburger img {
-  cursor: pointer;
-}
-header .nav-menu-2 {
-  display: none;
-  flex-direction: column;
-}
 header .classBtn {
   display: flex;
   flex-direction: column;
@@ -155,6 +152,26 @@ header .classBtn:hover .btn {
 header .classBtn:after {
   border-color: #c6ac83;
 }
+header .nav-menu-2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+header .nav-menu-2 div {
+  width: 30px;
+  color: #c6ac83;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 10px 0px;
+}
+header .nav-menu-2 div:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  color: #c6ac83;
+  border-top: 1px solid;
+  transform: translateX(10px);
+}
 
 
 .hero {
@@ -164,6 +181,9 @@ header .classBtn:after {
   flex-direction: column;
   margin-bottom: 0px;
   justify-content: end;
+  width: 100%;
+  height: 100vh;
+  /* align-items: center; */
 }
 .hero .first-image1 {
   position: relative;
@@ -207,20 +227,21 @@ header .classBtn:after {
   display: flex;
   position: absolute;
   align-items: end;
-  justify-content: end;
+  justify-content: center;
   width: 100%;
   background-color: #0e1927;
 }
 .hero .first-rightdown>div {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  padding: 40px 0px;
+  padding: 20px 0px;
   width: 100%;
-  margin-right: 20px;
+  margin: 0 20px;
+  gap: 20px;
 }
 .hero .first-rightdown>div div {
   border: 1px solid #c6ac83;
-  margin-left: 20px;
   padding: 10px 25px;
   font-family: 'Tenor Sans', sans-serif;
   font-weight: 400;
@@ -235,7 +256,12 @@ header .classBtn:after {
   margin-left: 16px;
   transform: translateY(6px);
 }
-.hero #section-right {
+.hero .first-rightdown button {
+  background-color: transparent;
+  border: 1px solid #c6ac83;
+  color: white;
+}
+.hero .hero-right {
   background-color: #0e1927;
   color: white;
   text-align: center;
@@ -591,10 +617,12 @@ header .classBtn:after {
   margin: 120px 0;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 .videoPreparation img {
   width: 100%;
-  height: 626px;
+  height: 100%;
 }
 .videoPreparation .video-play {
   background-color: #0e1927;
@@ -900,8 +928,8 @@ footer {
 }
 footer .footer-part1 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 60px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 50px;
   gap: 20px;
 }
 footer .footer-part1>div:first-child {
@@ -920,15 +948,17 @@ footer .footer-part1 .footer-reseaux {
 }
 footer .footer-part1 .footer-reseaux a img:hover {
   scale: 120%;
-  transition: 0.8s;
+  transition: 500ms;
 }
 footer .footer-part1>div:first-child p {
   margin: 20px 0;
 }
 footer .footer-part1 .footer-quicklinks {
-  display: flex;
+  display: flexbox;
   flex-direction: column;
-  gap: 15px;
+  gap: 0px;
+  border-top: 1px solid;
+  padding-top: 20px;
 }
 footer .footer-part1 .footer-quicklinks a {
   font-size: 18px;  
@@ -936,6 +966,7 @@ footer .footer-part1 .footer-quicklinks a {
   font-weight: 400;
   line-height: 20px;
   color: white;
+  margin: 0 10px;
 }
 footer .footer-part1 .footer-location, .footer-latestnews {
   border-top: 1px solid;
@@ -968,8 +999,124 @@ footer .footer-lastpart div {
   gap: 10px;
 }
 footer .footer-lastpart div p {
-  margin-left: 10px;
+  margin-left: 0px;
   text-transform: uppercase;
+}
+
+@media (min-width: 520px) {
+  button {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 45px;
+    text-transform: capitalize;
+  }
+  h2 {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "Tenor Sans", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 300;
+  }
+
+  footer {
+    background-color: #0e1927;
+    color: white;
+    margin-top: 70px;
+  }
+  footer .footer-part1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px;
+    gap: 20px;
+  }
+  footer .footer-part1>div:first-child {
+    width: 90%;
+  }
+  footer .footer-part1 .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    gap: 5px;
+  }
+  footer .footer-part1 .footer-reseaux {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footer-part1 .footer-reseaux a img:hover {
+    scale: 120%;
+    transition: 0.8s;
+  }
+  footer .footer-part1>div:first-child p {
+    margin: 20px 0;
+  }
+  footer .footer-part1 .footer-quicklinks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: none;
+    padding-top: 0px;
+  }
+  footer .footer-part1 .footer-quicklinks a {
+    font-size: 18px;  
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    margin: 0;
+  }
+  footer .footer-part1 .footer-location, .footer-latestnews {
+    border-top: 1px solid;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .footer-part1 .footer-latestnews button {
+    color: white;
+    border: 1px solid #c6ac83;
+    justify-content: space-between;
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+  }
+  footer .footer-part1 .footer-latestnews button a {
+    color: #ffffff;
+  }
+  footer .footer-lastpart {
+    display: flex;
+    padding: 60px 0;
+    margin: 0 60px;
+    border-top: 1px solid #c6ac83;
+    justify-content: space-between;
+  }
+  footer .footer-lastpart div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .footer-lastpart div p {
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
 }
 
 
@@ -1039,9 +1186,6 @@ footer .footer-lastpart div p {
     font-weight: 400;
     margin: 0 30px;
   }
-  .nav-menuHamburger img {
-    cursor: pointer;
-  }
   header .classBtn .btn {
     background-color: #0e1927;
     border: 1px solid #c6ac83;
@@ -1050,7 +1194,7 @@ footer .footer-lastpart div p {
     font-size: 14px;
   }
   header .nav-menu-2 {
-    display: none;
+    display: flex;
     flex-direction: column;
   }
   
@@ -1063,6 +1207,8 @@ footer .footer-lastpart div p {
     justify-content: end;
     align-items: center;
     position: relative;
+    height: 100%;
+    width: 100%;
   }
   .hero .first-savortheart {
     position: absolute;
@@ -1088,12 +1234,14 @@ footer .footer-lastpart div p {
     background-color: #0e1927;
   }
   .hero .first-rightdown>div {
-    display: flex;
-    padding: 40px 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px 30px;
+    margin: 0;
   }
   .hero .first-rightdown>div div {
     border: 1px solid #c6ac83;
-    margin-left: 40px;
     padding: 16px 32px;
     font-family: 'Tenor Sans', sans-serif;
     font-weight: 400;
@@ -1712,6 +1860,8 @@ footer .footer-lastpart div p {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border: none;
+    padding-top: 0px;
   }
   footer .footer-part1 .footer-quicklinks a {
     font-size: 20px;  
@@ -1719,6 +1869,7 @@ footer .footer-lastpart div p {
     font-weight: 400;
     line-height: 20px;
     color: white;
+    margin: 0;
   }
   footer .footer-part1 .footer-location, .footer-latestnews {
     border: none;
@@ -1791,9 +1942,6 @@ footer .footer-lastpart div p {
     position: absolute;
     width: 100%;
   }
-  header .nav-menuHamburger {
-    display: none;
-  }
   header .logo {
     display: flex;
     flex-direction: column;
@@ -1826,25 +1974,6 @@ footer .footer-lastpart div p {
     border: 1px solid;
     padding: 12px 10px;
   }
-  header .nav-menu-2 {
-    display: flex;
-    flex-direction: column;
-  }
-  header .nav-menu-2 div {
-    width: 30px;
-    color: #c6ac83;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    padding: 10px 0px;
-  }
-  header .nav-menu-2 div:after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    color: #c6ac83;
-    border-top: 1px solid;
-    transform: translateX(10px);
-  }
 
 
   .hero {
@@ -1855,6 +1984,8 @@ footer .footer-lastpart div p {
     margin-bottom: 120px;
     align-items: end;
     justify-content: center;
+    width: 100%;
+    height: 100%;
   }
   .hero .first-image1 {
     position: inherit;
@@ -1888,20 +2019,24 @@ footer .footer-lastpart div p {
     bottom: 0;
   }
   .hero .first-rightdown>div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     width: 50%;
     background-color: #0e1927;
     padding: 40px 40px;
-    margin-right: 0px;
   }
   .hero .first-rightdown>div div {
     border: 1px solid #c6ac83;
-    margin-left: 20px;
+    margin-left: 0px;
     padding: 16px 30px;
     font-family: 'Tenor Sans', sans-serif;
     font-weight: 400;
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
-  
+
 
 
   .about {
@@ -2473,6 +2608,8 @@ footer .footer-lastpart div p {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border: none;
+    padding-top: 0px;
   }
   footer .footer-part1 .footer-quicklinks a {
     font-size: 20px;  
@@ -2480,6 +2617,7 @@ footer .footer-lastpart div p {
     font-weight: 400;
     line-height: 20px;
     color: white;
+    margin: 0;
   }
   footer .footer-part1 .footer-location, .footer-latestnews {
     border: none;
