@@ -6,12 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('cliccckk');
     const menu1 = document.querySelector('.nav-menu-1');
 
-    if (menu1.style.display = 'none') {
-      menu1.style.display = 'flex';
-      menu1.style.transform = 'translateX(0)';
-      menu1.style.transform = 'translateY(100%)';
+    if (menu1.classList.contains('active')) {
+      console.log('navmenu1 is active');
+      menu1.classList.remove('active');
+      menu1.style.transform = 'translateX(100%)';
+      menu1.style.transition = '200ms';
     } else {
-      menu1.style.display = 'none';
+      console.log('navmenu1 is not active');
+      menu1.classList.add('active');
+      menu1.style.transform = 'translateX(0%)';
+      menu1.style.transition = '200ms';
     }
   })
+
 })
