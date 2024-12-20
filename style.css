@@ -88,11 +88,12 @@ h2 {
   text-transform: uppercase;
 }
 h3 {
-  font-weight: 400;
+  font-weight: 300;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 15px;
   line-height: 15px;
   text-transform: uppercase;
+  font-style: normal;
 }
 h4 {
   margin-bottom: 10px;
@@ -130,10 +131,11 @@ header .nav-menu-1 {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 100%;
+  top: 99%;
+  width: 100%;
   right: 0;
-  height: 85vh;
-  gap: 0px;
+  height: 100vh;
+  gap:  0;
   background-color: #0e1927;
   align-items: center;
   transform: translateX(100%);
@@ -148,17 +150,18 @@ header .nav-menu-1 a {
   font-family: 'Tenor Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  margin: 0 10px;
+  margin: 0;
   text-transform: uppercase;
   width: 100%;
-  height: 100%;
+  height: 10%;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-header .nav-menu-1 a:hover {
+header .nav-menu-1.active a:hover {
   background-color: #c6ac83;
   color: #0e1927;
+  transition: linear 100ms;
 }
 header .classBtn {
   display: flex;
@@ -1063,34 +1066,22 @@ footer .footer-lastpart div p {
   }
 
   h1 {
-    font-weight: 400;
-    font-family: "Tenor Sans", sans-serif;
     font-size: 45px;
-    text-transform: capitalize;
   }
   h2 {
     font-size: 25px;
-    font-weight: 400;
-    font-family: "Tenor Sans", sans-serif;
-    font-style: normal;
-    text-transform: uppercase;
   }
   h3 {
-    font-weight: 400;
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     line-height: 16px;
-    text-transform: uppercase;
   }
   h4 {
     margin-bottom: 10px;
     text-transform: uppercase;
   }
   p {
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
     line-height: 15px;
-    font-weight: 300;
   }
 
 
@@ -1729,30 +1720,21 @@ footer .footer-lastpart div p {
 
   h1 {
     font-size: 78px;
-    text-transform: capitalize;
-    font-weight: lighter;
-    font-weight: 400;
-    font-family: "Tenor Sans", sans-serif;
   }
   h2 {
     font-size: 32px;
-    font-weight: 400;
-    font-family: "Tenor Sans", sans-serif;
   }
   h3 {
-    font-weight: 400;
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
+    line-height: 20px;
   }
   h4 {
     font-weight: 500;
     margin-bottom: 10px;
   }
   p {
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     line-height: 20px;
-    font-weight: 300;
   }
 
 
@@ -2522,30 +2504,20 @@ footer .footer-lastpart div p {
 
   h1 {
     font-size: 78px;
-    text-transform: capitalize;
-    font-weight: lighter;
-    font-weight: 400;
-    font-family: "Tenor Sans", sans-serif;
   }
   h2 {
     font-size: 32px;
-    font-weight: 400;
-    font-family: "Tenor Sans", sans-serif;
   }
   h3 {
-    font-weight: 400;
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
+    line-height: 20px;
   }
   h4 {
     margin-bottom: 20px;
-    font-weight: 500;
   }
   p {
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     line-height: 20px;
-    font-weight: 300;
   }
 
 
@@ -2576,6 +2548,7 @@ footer .footer-lastpart div p {
     top: 0;
     transform: translateX(0%);
     height: auto;
+    width: auto;
     gap: 0px;
     justify-content: center;
     background-color: transparent;
