@@ -9,14 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menu1.classList.contains('active')) {
       console.log('navmenu1 is active');
       menu1.classList.remove('active');
-      menu1.style.transform = 'translateX(100%)';
-      menu1.style.transition = '200ms';
+      menu1.style.transition = '200ms'
     } else {
       console.log('navmenu1 is not active');
       menu1.classList.add('active');
-      menu1.style.transform = 'translateX(0%)';
-      menu1.style.transition = '200ms';
     }
   })
-
 })

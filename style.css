@@ -130,9 +130,9 @@ header .nav-menu-1 {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70px;
+  top: 90px;
   right: 0;
-  height: 90vh;
+  height: 85vh;
   gap: 0px;
   background-color: #0e1927;
   align-items: center;
@@ -140,7 +140,8 @@ header .nav-menu-1 {
   justify-content: center;
 }
 header .nav-menu-1.active {
-  /*  */
+  transform: translateX(0%);
+  transition: 200ms;
 }
 header .nav-menu-1 a {
   color: white;
@@ -292,7 +293,7 @@ header .nav-menu-2 div:hover:after {
 }
 .hero .first-rightdown button {
   background-color: transparent;
-  border: 1px solid #c6ac83;
+  border: none;
   color: white;
 }
 .hero .first-rightdown button:hover {
@@ -759,16 +760,17 @@ header .nav-menu-2 div:hover:after {
   justify-content: space-between;
   margin-bottom: 120px;
   align-items: center;
+  gap: 15px;
 }
 .dinning button {
   width: 40px;
+  color: #0e1927;
   background-color: transparent;
   border: none;
   border-radius: 20px;
   padding: 10px 0;
-}
-.dinning button:hover {
-  background-color: #c6ac83;
+  font-size: 2em;
+  font-weight: 300;
 }
 .dinning .seven-fleche img {
   width: 100%;
@@ -1057,7 +1059,7 @@ footer .footer-lastpart div p {
   }
   button {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   h1 {
@@ -1449,9 +1451,8 @@ footer .footer-lastpart div p {
     align-items: center;
   }
   .dinning button {
-    width: 40px;
-    background-color: transparent;
-    border: none;
+    width: 20px;
+    font-size: 3em;
   }
   .dinning .seven-fleche img {
     width: 100%;
@@ -2243,8 +2244,7 @@ footer .footer-lastpart div p {
   }
   .dinning button {
     width: 40px;
-    background-color: transparent;
-    border: none;
+    font-size: 4em;
   }
   .dinning .seven-fleche img {
     width: 100%;
@@ -3015,9 +3015,8 @@ footer .footer-lastpart div p {
     text-align: center;
   }
   .dinning button {
-    width: 40px;
-    background-color: transparent;
-    border: none;
+    width: 20px;
+    font-size: 5em;
   }
   .dinning .seven-fleche img {
     width: 100%;
