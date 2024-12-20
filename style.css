@@ -140,7 +140,7 @@ header .nav-menu-1 {
   justify-content: center;
 }
 header .nav-menu-1.active {
-  
+  /*  */
 }
 header .nav-menu-1 a {
   color: white;
@@ -154,6 +154,10 @@ header .nav-menu-1 a {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+header .nav-menu-1 a:hover {
+  background-color: #c6ac83;
+  color: #0e1927;
 }
 header .classBtn {
   display: flex;
@@ -177,6 +181,7 @@ header .classBtn:after {
   border-color: #c6ac83;
 }
 header .nav-menu-2 {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   margin-left: 20px;

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const rightSect = document.querySelector('.hero-right');
-  const sectRight = document.querySelector('.menu-right');
+  const sectRight = document.querySelector('.nav-menu-2');
 
   sectRight.addEventListener('click', () => {
     console.log('cliccckk');
