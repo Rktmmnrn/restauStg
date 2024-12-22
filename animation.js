@@ -1,22 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let rightSect = document.getElementsByClassName('.section-right');
-  let sectRight = document.getElementById('menu-right');
-  sectRight.addEventListener('Click', () => {
-    console.log('click ohh');
-    rightSect.style.display = 'flex';
-    rightSect.style.transform = 'translateX(0%)';
-  })
+  const rightSect = document.querySelector('.hero-right');
+  const sectRight = document.querySelector('.nav-menu-2');
 
-  let hamburg = document.getElementById('menuHamburger');
-  hamburg.addEventListener('click', () => {
+  sectRight.addEventListener('click', () => {
     console.log('cliccckk');
-    let menu1 = document.getElementById('nav-menu1');
+    const menu1 = document.querySelector('.nav-menu-1');
 
-    if (menu1.style.display = 'none') {
-      menu1.style.display = 'flex';
-      menu1.style.transform = 'translateX(0)';
+    if (menu1.classList.contains('active')) {
+      console.log('navmenu1 is active');
+      menu1.classList.remove('active');
+      menu1.style.transition = '200ms'
     } else {
-      menu1.style.display = 'none';
+      console.log('navmenu1 is not active');
+      menu1.classList.add('active');
     }
+
+    if (!rightSect.classList.contains('able')) {
+      console.log('right hero is not able so we need to able it...');
+      rightSect.classList.add('able');
+    } else {
+      // setTimeout(() => {
+        rightSect.classList.remove('able');
+        rightSect.style.transition = '500ms';
+      // }, 200)
+    }
+
+    document.getElementById('close').addEventListener('click', () => rightSect.classList.remove('able'))
   })
+
 })
