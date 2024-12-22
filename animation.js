@@ -19,10 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('right hero is not able so we need to able it...');
       rightSect.classList.add('able');
     } else {
-      setTimeout(() => {
-      rightSect.classList.remove('able');
-      }, 200)
+      // setTimeout(() => {
+        rightSect.classList.remove('able');
+        rightSect.style.transition = '500ms';
+      // }, 200)
     }
+
+    document.getElementById('close').addEventListener('click', () => rightSect.classList.remove('able'))
   })
 
 })
